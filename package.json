@@ -58,37 +58,37 @@
   "devDependencies": {
     "@neondatabase/serverless": "0.10.4",
     "@types/node": "22.13.1",
-    "@types/react": "19.0.8",
-    "@types/react-dom": "19.0.3",
+    "@types/react": "19.0.8 || 19.1.6",
+    "@types/react-dom": "19.0.3 || 19.1.5",
     "next": "15.1.6",
     "prettier": "3.4.2",
-    "react": "19.0.0",
-    "react-dom": "19.0.0",
+    "react": "19.0.0 || 19.1.0",
+    "react-dom": "19.0.0 || 19.1.0",
     "rimraf": "6.0.1",
     "server-only": "0.0.1",
     "stripe": "17.6.0",
     "tsup": "8.3.6",
     "tsx": "4.19.2",
     "vitest": "3.0.5",
-    "zod": "3.24.1"
+    "zod": "3.24.1 || 3.25.42"
   },
   "peerDependencies": {
     "@neondatabase/serverless": "0.9.4",
     "@types/node": "20 || 22",
-    "@types/react": "19.0.8",
-    "@types/react-dom": "19.0.3",
+    "@types/react": "19.0.8 || 19.1.6",
+    "@types/react-dom": "19.0.3 || 19.1.5",
     "next": "15.1.6",
-    "react": "19.0.0",
-    "react-dom": "19.0.0",
+    "react": "19.0.0 || 19.1.0",
+    "react-dom": "19.0.0 || 19.1.0",
     "server-only": "0.0.1",
     "stripe": "17",
-    "typescript": "5.5.4",
+    "typescript": "5.5.4 || 5.8.3",
     "zod": "3.23.8"
   },
   "peerDependencyRules": {
     "allowedVersions": {
-      "react": "19",
-      "react-dom": "19"
+      "react": "19 || 19.1",
+      "react-dom": "19 || 19.1"
     }
   },
   "scripts": {
