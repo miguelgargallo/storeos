@@ -1,7 +1,7 @@
 {
   "name": "storeos",
   "version": "1.0.6",
-  "description": "storeOS- A library for building ecommerce fully opensource stores with Stripe integration.",
+  "description": "storeOS - A library for building ecommerce fully opensource stores with Stripe integration.",
   "type": "module",
   "license": "Pylar AI Creative ML Free License",
   "keywords": [
