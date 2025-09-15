@@ -1,39 +1,41 @@
-# sk
+# storeOS — Open, lightweight storefront utilities
+
+storeOS is an open-source library for building storefronts and managing store data in Next.js applications. It's designed to be small, composable, and easy to adopt — with first-class Stripe-friendly helpers and sensible defaults.
+
+Badge: Published on npm as `storeos`.
 
 Open-source commitment
 ----------------------
-We are committed to maintaining sk as an open-source alternative for building and operating storefronts. Our goal is to provide a lightweight, extensible library that works well with Next.js and Stripe, and to keep the project transparent, documented, and community-friendly. Contributions, issues, and suggestions are welcome.
+We maintain storeOS as a transparent, community-friendly project. Contributions, issues, and suggestions are welcome — the goal is a lightweight toolkit that makes building and operating storefronts straightforward.
 
 Project overview
 ----------------
-`sk` is an open-source solution for building storefronts and managing Store data in Next.js applications. It provides utilities for product browsing, category management, orders, carts, and Stripe integration — designed to be small, composable, and framework-friendly.
-
-Built by Pencil Works, LLC — https://pencil.li
+storeOS provides utilities for product browsing, category management, carts, orders, and Stripe integration. The library favors readability, predictable variables, and modular APIs that let you pick only the pieces you need.
 
 Key features
 ------------
 - Product browsing and retrieval (paginated and filtered).
-- Category management and lookup utilities.
+- Category management and lookup helpers.
 - Order creation and handling flows.
 - Cart operations (add, remove, fetch).
-- Built-in Stripe support for payments and price formatting helpers.
-- Lightweight logger with configurable log levels.
+- Stripe helpers for payments and price formatting.
+- Minimal, configurable logger with environment-driven log levels.
 
-Installation
-------------
-Install with npm:
+Install (npm)
+-------------
+Install from npm:
 
 ```bash
-npm install sk
+npm install storeos
 ```
 
 Quick usage example
 -------------------
-A minimal example for Next.js to fetch and render products:
+Minimal Next.js example to fetch and render products:
 
 ```tsx
-import * as Store from "sk";
-import { formatMoney } from "sk/divisas";
+import * as Store from "storeos";
+import { formatMoney } from "storeos/divisas";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -44,13 +46,18 @@ export async function ProductList() {
     <ul>
       {products.map((product) => (
         <li key={product.id}>
-          <Link href={`/product/${product.metadata.slug}`}>
+          <Link href={`/product/${product.metadata?.slug ?? product.id}`}>
             <article>
-              {product.images[0] && (
-                <Image src={product.images[0]} width={300} height={300} alt={product.name} />
+              {product.images?.[0] && (
+                <Image
+                  src={product.images[0]}
+                  width={300}
+                  height={300}
+                  alt={product.name}
+                />
               )}
               <h2>{product.name}</h2>
-              {product.default_price?.unit_amount && (
+              {product.default_price?.unit_amount != null && (
                 <p>
                   {formatMoney({
                     amount: product.default_price.unit_amount,
@@ -70,35 +77,51 @@ export async function ProductList() {
 
 Usage notes
 -----------
-- The package is authored as an ESM module with TypeScript types exported from `dist`.
-- Exports include the main index and a few helper modules such as `divisas`, `internal`, `sk`, and `db`.
-- Peer dependencies include React and Next.js versions compatible with the package — check package.json for details.
+- Authored as an ESM package with TypeScript types in `dist`.
+- Main exports include the index and helper modules: `divisas`, `internal`, `sk`, `db`.
+- Peer dependencies include React and Next.js; consult package.json when integrating.
 
 Debugging and logging
 ---------------------
 Control debug output with the `LOG_LEVEL` environment variable:
-- ERROR — critical issues.
-- WARN — noteworthy but not fatal.
-- LOG — regular operational details.
-- DEBUG — verbose debugging including timing information.
+- ERROR — critical issues only.
+- WARN — noteworthy but non-fatal issues.
+- LOG — standard operational messages.
+- DEBUG — verbose debugging and timing.
+
+Core Values #codebase
+--------------------
+- Simplicity: APIs should be small and predictable.
+- Clarity: readable code and clear variable names to reduce onboarding friction.
+- Composability: functions and modules that can be composed or replaced.
+- Stability: sensible defaults and conservative public surface area.
+- Documentation-first: clear examples and pragmatic docs.
+
+Roadmap — make the codebase easier
+---------------------------------
+Short-term priorities:
+- Improve variable naming and reduce ambiguous identifiers across modules.
+- Simplify core APIs so common flows require fewer parameters.
+- Add small focused wrappers for common Next.js + Stripe patterns.
+- Improve TypeScript types and developer DX (better hints, smaller generics).
+- Expand examples and cookbooks for common storefront tasks.
+
+Long-term goals:
+- More adapters (payment providers, headless backends).
+- Better test coverage and CI checks focused on stability.
+- CLI utilities for scaffolding common storefront pages.
 
 Contributing
 ------------
-We welcome issues, pull requests, and feature suggestions. When contributing:
-- Open an issue to discuss larger changes before implementing.
-- Follow existing code style; run formatting tools if present (prettier).
-- Add small, focused commits and clear PR descriptions.
-
-Maintenance & roadmap
----------------------
-- The project is actively maintained with a focus on compatibility with modern Next.js and Stripe versions.
-- We aim for responsive fixes for critical issues and incremental feature improvements.
-- Roadmap items include more first-class integrations, improved TypeScript types, and expanded test coverage.
+- Open an issue before major changes.
+- Small, focused pull requests are preferred.
+- Follow existing styles and run formatters (prettier) if present.
+- Document changes and add examples for new features.
 
 License
 -------
-This project is distributed under the Pylar AI Creative ML Free License — see LICENSE.md for full text and restrictions (spoiler: none).
+This project is distributed under the Pylar AI Creative ML Free License — see LICENSE.md for details.
 
 Contact
 -------
-Pencil Works, LLC — pencil.li
+Pencil Works, LLC — https://pencil.li
