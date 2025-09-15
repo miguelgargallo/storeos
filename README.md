@@ -2,22 +2,22 @@
 
 [![npm](https://img.shields.io/npm/v/storeos?label=npm&color=brightgreen)](https://www.npmjs.com/package/storeos) [![License](https://img.shields.io/badge/license-Pylar%20AI%20Creative%20ML%20Free-blue)](./LICENSE.md)
 
-storeOS: un paquete abierto y ligero para construir storefronts y gestionar datos de tienda en Next.js, con helpers listos para Stripe y una API modular y fácil de usar.
+storeOS is an open, lightweight package for building storefronts and managing store data in Next.js. It includes Stripe-ready helpers and a modular, easy-to-use API.
 
 Open-source commitment
 ----------------------
-We maintain storeOS as a transparent, community-friendly project. Contributions, issues, and suggestions are welcome — the goal is a lightweight toolkit that makes building and operating storefronts straightforward.
+We maintain storeOS as a transparent, community-focused project. Contributions, issues, and suggestions are welcome. The goal is a small, practical toolkit that makes building and operating storefronts straightforward.
 
 Project overview
 ----------------
-storeOS provides utilities for product browsing, category management, carts, orders, and Stripe integration. The library favors readability, predictable variables, and modular APIs that let you pick only the pieces you need.
+storeOS provides utilities for product browsing, category management, carts, orders, and Stripe integration. The library emphasizes readable code, predictable variable names, and modular APIs so you can use only what you need.
 
 Key features
 ------------
-- Product browsing and retrieval (paginated and filtered).
+- Product browsing and retrieval (pagination and filtering).
 - Category management and lookup helpers.
-- Order creation and handling flows.
-- Cart operations (add, remove, fetch).
+- Order creation and processing flows.
+- Cart operations: add, remove, fetch.
 - Stripe helpers for payments and price formatting.
 - Minimal, configurable logger with environment-driven log levels.
 
@@ -78,7 +78,7 @@ export async function ProductList() {
 Usage notes
 -----------
 - Authored as an ESM package with TypeScript types in `dist`.
-- Main exports include the index and helper modules: `divisas`, `internal`, `sk`, `db`.
+- Primary exports include the main entry and helper modules: `divisas`, `internal`, `sk`, `db`.
 - Peer dependencies include React and Next.js; consult package.json when integrating.
 
 Debugging and logging
@@ -87,22 +87,22 @@ Control debug output with the `LOG_LEVEL` environment variable:
 - ERROR — critical issues only.
 - WARN — noteworthy but non-fatal issues.
 - LOG — standard operational messages.
-- DEBUG — verbose debugging and timing.
+- DEBUG — verbose debugging and timing details.
 
-Core Values #codebase
---------------------
-- Simplicity: APIs should be small and predictable.
+Core Values — #codebase
+-----------------------
+- Simplicity: keep APIs small and predictable.
 - Clarity: readable code and clear variable names to reduce onboarding friction.
-- Composability: functions and modules that can be composed or replaced.
-- Stability: sensible defaults and conservative public surface area.
-- Documentation-first: clear examples and pragmatic docs.
+- Composability: functions and modules that are easy to compose or replace.
+- Stability: sensible defaults and a conservative public surface area.
+- Documentation-first: practical examples and clear docs.
 
 Roadmap — make the codebase easier
----------------------------------
+----------------------------------
 Short-term priorities:
 - Improve variable naming and reduce ambiguous identifiers across modules.
 - Simplify core APIs so common flows require fewer parameters.
-- Add small focused wrappers for common Next.js + Stripe patterns.
+- Add small, focused wrappers for common Next.js + Stripe patterns.
 - Improve TypeScript types and developer DX (better hints, smaller generics).
 - Expand examples and cookbooks for common storefront tasks.
 
@@ -113,7 +113,7 @@ Long-term goals:
 
 Contributing
 ------------
-- Open an issue before major changes.
+- Open an issue to propose larger changes before implementing.
 - Small, focused pull requests are preferred.
 - Follow existing styles and run formatters (prettier) if present.
 - Document changes and add examples for new features.
