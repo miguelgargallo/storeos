@@ -1,6 +1,6 @@
 {
   "name": "storeos",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "storeOS- A library for building ecommerce fully opensource stores with Stripe integration.",
   "type": "module",
   "license": "Pylar AI Creative ML Free License",
@@ -15,17 +15,20 @@
   "$schema": "https://json.schemastore.org/package",
   "author": {
     "name": "Pencil Works, LLC",
-    "email": "hi@epicevils.com",
-    "url": "https://epicevils.com"
+    "email": "noreply@itamaesan.org",
+    "url": "https://itamaesan.org"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/itamaesan/storeos.git"
+    "url": "https://github.com/itamaesanorg/storeos.git"
   },
   "bugs": {
-    "url": "https://github.com/itamaesan/storeos/issues"
+    "url": "https://github.com/itamaesanorg/storeos/issues"
   },
-  "homepage": "https://github.com/itamaesan/storeos#readme",
+  "homepage": "https://github.com/itamaesanorg/storeos#readme",
+  "dependencies": {
+    "storeos": "github:itamaesanorg/storeos"
+  },
   "exports": {
     ".": {
       "import": "./dist/index.js",
