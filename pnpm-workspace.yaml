@@ -1,4 +1,4 @@
-minimumReleaseAge: 1440 # 600 minutes = 10 hours or 1 day (1440 minutes)
+minimumReleaseAge: 1440 # 600 minutes = 10 hours or 1 day 
 
 minimumReleaseAgeExclude:
   - storeos
