@@ -1,7 +1,7 @@
 {
   "name": "openstore",
   "version": "1.0.0",
-  "description": "SK, Store Kit - A library for building ecommerce fully opensource stores with Stripe integration.",
+  "description": "Open Store, the Store Kit - A library for building ecommerce fully opensource stores with Stripe integration.",
   "type": "module",
   "license": "Pylar AI Creative ML Free License",
   "keywords": [
