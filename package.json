@@ -1,5 +1,5 @@
 {
-  "name": "store-kit",
+  "name": "openstore",
   "version": "1.0.0",
   "description": "SK, Store Kit - A library for building ecommerce fully opensource stores with Stripe integration.",
   "type": "module",
