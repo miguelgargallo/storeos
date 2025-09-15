@@ -18,6 +18,14 @@
     "email": "hi@epicevils.com",
     "url": "https://epicevils.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/itamaesan/storeos.git"
+  },
+  "bugs": {
+    "url": "https://github.com/itamaesan/storeos/issues"
+  },
+  "homepage": "https://github.com/itamaesan/storeos#readme",
   "exports": {
     ".": {
       "import": "./dist/index.js",

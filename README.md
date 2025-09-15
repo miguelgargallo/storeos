@@ -1,6 +1,6 @@
 # storeOS — Open, lightweight storefront utilities
 
-[![npm](https://img.shields.io/npm/v/storeos?label=npm&color=brightgreen)](https://www.npmjs.com/package/storeos) [![License](https://img.shields.io/badge/license-Pylar%20AI%20Creative%20ML%20Free-blue)](./LICENSE.md)
+[![npm](https://img.shields.io/npm/v/storeos?label=npm&color=brightgreen)](https://www.npmjs.com/package/storeos) [![GitHub](https://img.shields.io/badge/-github-181717?logo=github&logoColor=white)](https://github.com/itamaesanorg/storeos) [![License](https://img.shields.io/badge/license-Pylar%20AI%20Creative%20ML%20Free-blue)](./License.md)
 
 storeOS is an open, lightweight package for building storefronts and managing store data in Next.js. It includes Stripe-ready helpers and a modular, easy-to-use API.
 
