@@ -1,8 +1,8 @@
 # storeOS — Open, lightweight storefront utilities
 
-storeOS is an open-source library for building storefronts and managing store data in Next.js applications. It's designed to be small, composable, and easy to adopt — with first-class Stripe-friendly helpers and sensible defaults.
+[![npm](https://img.shields.io/npm/v/storeos?label=npm&color=brightgreen)](https://www.npmjs.com/package/storeos) [![License](https://img.shields.io/badge/license-Pylar%20AI%20Creative%20ML%20Free-blue)](./LICENSE.md)
 
-Badge: Published on npm as `storeos`.
+storeOS: un paquete abierto y ligero para construir storefronts y gestionar datos de tienda en Next.js, con helpers listos para Stripe y una API modular y fácil de usar.
 
 Open-source commitment
 ----------------------
